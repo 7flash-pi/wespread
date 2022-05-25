@@ -57,29 +57,29 @@ body {
 .navigation a:hover {
   background:var(--color3);
 }
-.about-container {
-  display: grid;
-  grid-template-rows: auto auto auto;
-  justify-content: center;
-  margin: 2rem 30% 2rem 30%;
-  border: 2px solid var(--color4);
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  background-color: var(--color2);
+.about{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width :80%;
+  margin:2rem 0 0 10%;
+
 }
+.about-container{
+    border: 2px solid var(--color4);
+    width:350px;
+    margin: 0 2rem 2rem 0;
+    text-align: center;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  }
 
 .about-container img {
-  width: 300px;
-  height: 300px;
+  width: 250px;
+  height: 250px;
   border: 1px solid var(--color3);
   padding: 10px;
   margin: 20px 0 20px 0;
 
-}
-
-.grid-item {
-  border: 1px solid var(--color4);
-  text-align: center;
-  padding: 20px;
 }
 
 .about-container p {
@@ -174,29 +174,28 @@ body {
   }
 }
 
-@media all and (max-width: 600px) {
-  .about-container {
-    display: grid;
-    grid-template-rows: auto auto auto;
-    justify-content: center;
-    margin: 2rem 10% 2rem 10%;
-    border: 2px solid var(--color4);
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+@media all and (max-width: 600px),(max-width: 990px) {
+  .about {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 2rem 15% 2rem 15%;
+    width:250px;
+  }
+  .about-container{
+    border:2px solid var(--color4);
+    margin-bottom: 20px;
+    width:300px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+
   }
   
   .about-container img {
     width: 200px;
     height: 200px;
-    border: 1px solid var(--color3);
     padding: 5px;
     margin: 25px;
   
-  }
-  
-  .grid-item {
-    border: 1px solid var(--color4);
-    text-align: center;
-    padding: 20px;
   }
   
   .about-container p {
@@ -204,11 +203,11 @@ body {
       cursive;
     font-size: 120%;
     text-align: center;
-    margin-bottom: 25px;
+    margin-bottom: 10px;
   }
 }
 
-@media all and (max-width: 600px) {
+@media all and (max-width: 600px),(max-width: 990px) {
   .contact-container {
     display: flex;
     flex-direction: column;
